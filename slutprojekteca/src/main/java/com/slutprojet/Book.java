@@ -1,9 +1,9 @@
 package com.slutprojet;
 
-    /**KLassen Book representerar en bok i biblioteksystemet */
+    /**Klassen Book representerar en bok i biblioteksystemet */
 
-public class Book {
-    private String  author;
+public class Book extends LibraryItem {
+    private String author;
     private String genre;
     private int pages;
     public Book(int id, String title, String author, String genre, int pages, boolean isAvailable) {
@@ -15,5 +15,16 @@ public class Book {
 
     public String getAuthor() {
         return author;
+    }
+    public String getGenre() {
+        return genre;
+    }
+    public int getPages() {
+        return pages;
+    }
+
+    @Override
+    public String getInfo() {
+        return "Book - ID: " + getId() + ", Title: " + getTitle() + ", Author: " + getAuthor() + ", Genre: " + getGenre() + ", Pages: " + getPages() + ", Available: " + getIsAvailable();
     }
 }

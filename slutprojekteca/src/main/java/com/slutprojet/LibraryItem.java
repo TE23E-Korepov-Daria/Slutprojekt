@@ -9,13 +9,13 @@ public class LibraryItem {
     private int publicationYear;
     private boolean isAvailable;
 
-    public LibraryItem(String id, String title, boolean isAvailable){
+    public LibraryItem(int id, String title, boolean isAvailable){
         this.id = id;
         this.title = title;
         this.isAvailable = isAvailable;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
     public String getTitle() {
