@@ -1,5 +1,7 @@
 package com.slutprojet;
 
+/**KLassen Magazine representerar en tidning i bibliotekssystemet */
+
 public class Magazine extends LibraryItem {
     private int issueNumber;
     private String category;
