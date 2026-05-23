@@ -25,8 +25,5 @@ public class Magazine extends LibraryItem {
         return publicationYear;
     }
 
-    @Override
-    public String getInfo() {
-        return "Magazine - ID: " + getId() + ", Title: " + getTitle() + ", Issue Number: " + getIssueNumber() + ", Category: " + getCategory() + ", Published Year: " + getPublicationYear() + ", Available: " + getIsAvailable();
-    }
+    
 }
