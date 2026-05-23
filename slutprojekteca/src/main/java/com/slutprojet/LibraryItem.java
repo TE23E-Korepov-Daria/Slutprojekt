@@ -1,7 +1,6 @@
 //Daria Korepov - TE23E
 //Filen innehåller basklassen för bibliotekets objekt, t.ex. böcker och tidningar. 
 
-
 package com.slutprojet;
 
 // Klassen innehåller gemensamma variabler och metoder för alla bibliotekobjekt
