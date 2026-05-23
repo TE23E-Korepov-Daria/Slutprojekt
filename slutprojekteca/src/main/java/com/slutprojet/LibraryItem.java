@@ -1,13 +1,15 @@
-package com.slutprojet;
+//Daria Korepov - TE23E
+//Filen innehåller basklassen för bibliotekets objekt, t.ex. böcker och tidningar. 
 
-/**Basklass för bibliotekets objekt, till exempel böcker och tidningar*/
+
+package com.slutprojet;
 
 // Klassen innehåller gemensamma variabler och metoder för alla bibliotekobjekt
 public class LibraryItem {
+
+    // Gemensamma variabler för alla bibliotekobjekt
     protected String id;
     protected String title;
-    protected String author;
-    protected String publicationYear;
     protected Boolean isAvailable;
 
     // Konstruktor för att skapa ett bibliotekobjekt

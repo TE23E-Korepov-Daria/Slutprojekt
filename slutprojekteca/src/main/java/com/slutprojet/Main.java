@@ -1,13 +1,14 @@
+//Daria Korepov - TE23E
+// Detta är huvudklassen där programmet startar. 
+// Här finns en meny som låter användaren hämta data från servern, skriva ut data eller lägga till nya böcker och tidningar lokalt.
 
 package com.slutprojet;
-
-/**Programmet LibSys hämtar böcker och tidningar från servern, sparar dem lokalt i ArrayList och låter användaren lägga till nya objekt lokalt */
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import com.google.gson.*;
 import com.google.gson.reflect.TypeToken;
-import java.net.URL;
+import java.net.URL;  
 import kong.unirest.*;
 import java.lang.reflect.Type;
 
