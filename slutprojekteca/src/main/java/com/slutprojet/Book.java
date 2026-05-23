@@ -6,8 +6,8 @@ public class Book extends LibraryItem {
     private String author;
     private String genre;
     private int pages;
-    public Book(int id, String title, String author, String genre, int pages, boolean isAvailable) {
-        super(id, title, isAvailable);
+    public Book(String id, String title, String author, String genre, int pages, Boolean isAvailable) {
+        super(id, title, author, publicationYear, isAvailable);
         this.author = author;
         this.genre = genre;
         this.pages = pages;
@@ -24,7 +24,7 @@ public class Book extends LibraryItem {
     }
 
     @Override
-    public String getInfo() {
-        return "Book - ID: " + getId() + ", Title: " + getTitle() + ", Author: " + getAuthor() + ", Genre: " + getGenre() + ", Pages: " + getPages() + ", Available: " + getIsAvailable();
+    public String toString() {
+        return super.toString() + ", Author: " + author + ", Genre: " + genre + ", Pages: " + pages;
     }
 }

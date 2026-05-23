@@ -4,14 +4,14 @@ package com.slutprojet;
 
 // Klassen innehåller gemensamma variabler och metoder för alla bibliotekobjekt
 public class LibraryItem {
-    protected int id;
+    protected String id;
     protected String title;
     protected String author;
-    protected int publicationYear;
-    protected boolean isAvailable;
+    protected String publicationYear;
+    protected Boolean isAvailable;
 
     // Konstruktor för att skapa ett bibliotekobjekt
-    public LibraryItem(int id, String title, String author, int publicationYear, boolean isAvailable){
+    public LibraryItem(String id, String title, String author, String publicationYear, Boolean isAvailable){
         this.id = id;
         this.title = title;
         this.author = author;
@@ -20,7 +20,7 @@ public class LibraryItem {
     }
 
     // Getters för alla variabler
-    public int getId() {
+    public String getId() {
         return id;
     }
     public String getTitle() {
@@ -29,10 +29,10 @@ public class LibraryItem {
     public String getAuthor() {
         return author;
     }
-    public int getPublicationYear() {
+    public String getPublicationYear() {
         return publicationYear;
     }
-    public boolean getIsAvailable() {
+    public Boolean getIsAvailable() {
         return isAvailable;
     }
 
