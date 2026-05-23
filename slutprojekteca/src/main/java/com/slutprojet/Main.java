@@ -80,7 +80,7 @@ public class Main {
                         String genre = System.console().readLine("Genre:");
                         int pages = Integer.parseInt(System.console().readLine("Antal sidor:"));
 
-                        books.add(new Book(id, title, author, genre, pages));
+                        books.add(new Book(id, title, author, genre, pages, true));
                         System.out.println("Bok har lagts till lokalt.");
                     } catch (NumberFormatException e) {
                         System.out.println("Ogiltigt format för antal sidor.");
@@ -95,7 +95,7 @@ public class Main {
                         String category = System.console().readLine("Kategori:");
                         int publicationYear = Integer.parseInt(System.console().readLine("Utgivningsår:"));
 
-                        magazines.add(new Magazine(id, title, issueNumber, category, publicationYear));
+                        magazines.add(new Magazine(id, title, true, issueNumber, category, publicationYear));
                         System.out.println("Tidning har lagts till lokalt.");
                     } catch (NumberFormatException e) {
                         System.out.println("Ogiltigt format för nummer eller år.");

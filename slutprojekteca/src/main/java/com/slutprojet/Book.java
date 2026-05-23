@@ -7,7 +7,10 @@ public class Book extends LibraryItem {
     private String genre;
     private int pages;
     public Book(String id, String title, String author, String genre, int pages, Boolean isAvailable) {
-        super(id, title, author, publicationYear, isAvailable);
+        
+        //Anropar super för att kalla in från basklassen LibraryItem
+        super(id, title, isAvailable);
+
         this.author = author;
         this.genre = genre;
         this.pages = pages;

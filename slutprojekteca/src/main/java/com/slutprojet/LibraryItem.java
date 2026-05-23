@@ -11,11 +11,9 @@ public class LibraryItem {
     protected Boolean isAvailable;
 
     // Konstruktor för att skapa ett bibliotekobjekt
-    public LibraryItem(String id, String title, String author, String publicationYear, Boolean isAvailable){
+    public LibraryItem(String id, String title, Boolean isAvailable){
         this.id = id;
         this.title = title;
-        this.author = author;
-        this.publicationYear = publicationYear;
         this.isAvailable = isAvailable;
     }
 
@@ -26,12 +24,6 @@ public class LibraryItem {
     public String getTitle() {
         return title;
     }
-    public String getAuthor() {
-        return author;
-    }
-    public String getPublicationYear() {
-        return publicationYear;
-    }
     public Boolean getIsAvailable() {
         return isAvailable;
     }
@@ -39,7 +31,7 @@ public class LibraryItem {
     //toString metod för att visa information om bibliotekobjektet
     @Override
     public String toString() {
-        return "ID: " + this.id + ", Title: " + this.title + ", Author: " + this.author + ", Year: " + this.publicationYear + ", Available: " + this.isAvailable;
+        return "ID: " + this.id + ", Title: " + this.title + ", Available: " + this.isAvailable;
     }
 }
 
