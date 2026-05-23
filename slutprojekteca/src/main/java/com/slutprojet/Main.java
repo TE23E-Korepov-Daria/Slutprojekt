@@ -16,13 +16,14 @@ public class Main {
     private static ArrayList<Book> books = new ArrayList<>();
     private static ArrayList<Magazine> magazines = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
         int choice = 0;
 
         while (choice != 6) {
             showMenu();
 
-            try{
+            try {
                 choice = Integer.parseInt(scanner.nextLine());
 
                 switch (choice) {
@@ -45,9 +46,34 @@ public class Main {
                         System.out.println("Avslutar programmet.");
                         break;
                     default:
-                        System.out.println("Fel input. Försök igen!");
+                        System.out.println("Fel val! V'lj ett nummer mellan 1 och 6.");
                 }
-            }  
+            } catch (NumberFormatException e) {
+                System.out.println("Fel input! Skriv ett nummer!");
+            }
+        }
+    }
+
+    private static void showMenu() {
+        System.out.println("1. Hämta böcker från servern");
+        System.out.println("2. Hämta tidningar från servern");
+        System.out.println("3. Skriv ut alla böcker och tidningar");
+        System.out.println("4. Lägg till bok lokalt");
+        System.out.println("5. Lägg till tidning lokalt");
+        System.out.println("6. Avsluta");
+        System.out.println("Välj ett alternativ:");
+    }
+
+    private static void fetchBooksFromServer(){
+        try {
+            String json = sendGetRequest(SERVER_URL + "books");
+
+            books.clear();
+            String[] objects = json.split("\\},\\{");
+
+            for (String object : objects) {
+                
+            }
         }
     }
 }
