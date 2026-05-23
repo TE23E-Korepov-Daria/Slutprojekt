@@ -22,4 +22,23 @@ public class HttpHelper {
             return null; // Returnerar null om det blev ett fel
         }
     }
+
+    // Hämtar text från URL (magazines) och ger tillbaka texten som en sträng
+    public static String getMagazines() {
+        try {
+            // GÖr om till URL objekt 
+            String url = "http://10.151.168.5:3130/magazines";
+            // Öppnar koppling till server
+            HttpResponse<String> response = Unirest.get(url).asString();
+
+            String json_data = response.getBody();
+            //SParar text läst från severn
+
+            return json_data; // Skickar tillbaka strängen som innehåller json data
+
+        } catch (Exception e) {
+            System.out.println("Fel vid GET magazines:" + e.getMessage());
+            return null; // Returnerar null om det blev ett fel
+        }
+    }
 }
